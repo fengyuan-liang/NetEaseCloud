@@ -1,1 +1,1 @@
-export const baseUrl = '自己的后端接口地址';
+export const baseUrl = 'https://www.codeman.ink/api';

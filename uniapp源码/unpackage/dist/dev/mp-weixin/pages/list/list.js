@@ -264,9 +264,9 @@ __webpack_require__(/*! ../../common/iconfont.css */ 9);var musichead = function
     });
   },
   methods: {
-    handleToDetail: function handleToDetail(id) {
+    handleToDetail: function handleToDetail(event) {
       uni.navigateTo({
-        url: '/pages/detail/detail?songId=' + id });
+        url: '/pages/detail/detail?songId=' + event.currentTarget.dataset.id });
 
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))

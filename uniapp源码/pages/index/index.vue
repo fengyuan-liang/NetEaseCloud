@@ -20,7 +20,7 @@
 					</m-for-skeleton>
 				</view>
 				<view class="index-list" v-else>
-					<view class="index-list-item" v-for="(item,index) in topList" :key="id" @tap="handToList(item.id)">
+					<view class="index-list-item" v-for="(item,index) in topList" :key="item.id" @tap="handToList" :data-id="item.id">
 						<view class="index-list-img">
 							<image :src="item.coverImgUrl" mode=""></image>
 							<text>{{item.updateFrequency}}</text>
@@ -63,9 +63,9 @@
 			})
 		},
 		methods: {
-			handToList(listId) {
+			handToList(event) {
 				uni.navigateTo({
-					url: '../list/list?listId=' + listId
+					url: '../list/list?listId=' + event.currentTarget.dataset.id
 				})
 			},
 			handleToSearch() {

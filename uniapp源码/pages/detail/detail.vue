@@ -152,12 +152,12 @@
 						this.bgAudioMannager = uni.getBackgroundAudioManager();
 						this.bgAudioMannager.title = this.songDetail.name;
 						// #endif
-						// #ifdef H5
+						// #ifdef H5 || APP-PLUS
 						if(!this.bgAudioMannager){
 							this.bgAudioMannager = uni.createInnerAudioContext();
 						}
 						this.playicon = 'iconbofang1';
-						this.isplayrotate = false;
+						this.isplayrotate = false;  //不旋转
 						// #endif
 						this.bgAudioMannager.src = res[4][1].data.data[0].url;
 						this.listenLyricIndex();
@@ -171,7 +171,7 @@
 							this.isplayrotate = false;
 							this.cancelLyricIndex();
 						});
-						console.log(this.$store.state)
+						// console.log(this.$store.state)
 						// 监听歌曲播放结束
 						this.bgAudioMannager.onEnded(()=>{
 							this.playMusic(this.$store.state.nextId);

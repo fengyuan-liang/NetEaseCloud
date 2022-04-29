@@ -1,6 +1,6 @@
 {
     "name" : "netEaseCloud",
-    "appid" : "你自己微信的appid",
+    "appid" : "your appid",
     "description" : "",
     "versionName" : "1.0.0",
     "versionCode" : "100",
@@ -51,7 +51,7 @@
             "sdkConfigs" : {
                 "share" : {
                     "weixin" : {
-                        "appid" : "你自己微信的APPID",
+                        "appid" : "your appid",
                         "UniversalLinks" : ""
                     }
                 },
@@ -68,7 +68,7 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "你自己微信的APPID",
+        "appid" : "your appid",
         "setting" : {
             "urlCheck" : false,
             "es6" : true,
@@ -90,5 +90,10 @@
     "uniStatistics" : {
         "enable" : false
     },
-    "vueVersion" : "2"
+    "vueVersion" : "2",
+    "h5" : {
+        "router" : {
+            "base" : "./"
+        }
+    }
 }

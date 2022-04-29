@@ -2,7 +2,7 @@
 	<view class="list">
 		<view class="flexbg" :style="{'background-image':'url('+ playlist.coverImgUrl +')'}"></view>
 		<musichead title="歌单" :icon="true" color="white"></musichead>
-		<view class="container" v-show="!isLoading">
+		<view class="container" >
 			<scroll-view scroll-y="true">
 				<view class="list-head">
 					<view class="list-head-img">
@@ -42,7 +42,7 @@
 						<text class="iconfont iconbofang"></text>
 					</view> -->
 					<view class="list-music-item" v-for="(item,index) in playlist.tracks" :key="item.id"
-						@tap="handleToDetail(item.id)">
+						@tap="handleToDetail" :data-id="item.id">
 						<view class="list-music-top">{{ index + 1 }}</view>
 						<view class="list-music-song">
 							<view>{{ item.name }}</view>
@@ -74,7 +74,7 @@
 				playlist: {
 					coverImgUrl: '',
 					trackCount: '',
-					creator: ''
+					creator: '',
 				},
 				privileges: [],
 				isShow: false
@@ -99,9 +99,9 @@
 			});
 		},
 		methods: {
-			handleToDetail(id) {
+			handleToDetail(event) {
 				uni.navigateTo({
-					url: '/pages/detail/detail?songId=' + id
+					url: '/pages/detail/detail?songId=' + event.currentTarget.dataset.id
 				});
 			}
 		}
