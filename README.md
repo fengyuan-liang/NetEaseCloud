@@ -12,7 +12,7 @@
 
 **创作不易请不要吝啬你的star**
 
-先看下H5端演示（已经跟网易云小程序版做的差不多了）：
+先看下H5端演示（已经跟网易云小程序版做的差不多了），<a href="https://cdn.fengxianhub.top/eureka-static/netEaseCloudMusic/index.html">H5地址</a>：
 
 ![演示](https://cdn.fengxianhub.top/resources-master/202204221829944.gif)
 
